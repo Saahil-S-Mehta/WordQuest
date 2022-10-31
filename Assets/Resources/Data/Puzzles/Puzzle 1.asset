@@ -18,38 +18,38 @@ MonoBehaviour:
   - Size: 5
     Row:
     - C
+    - E
+    - H
+    - A
+    - W
+  - Size: 5
+    Row:
+    - A
+    - Q
+    - C
+    - A
+    - W
+  - Size: 5
+    Row:
+    - T
+    - S
+    - A
+    - T
+    - T
+  - Size: 5
+    Row:
+    - V
     - Y
     - H
-    - U
-    - A
-  - Size: 5
-    Row:
-    - A
-    - P
-    - L
-    - A
-    - L
-  - Size: 5
-    Row:
-    - T
-    - V
-    - X
-    - K
-    - T
-  - Size: 5
-    Row:
-    - Y
-    - I
     - B
-    - B
-    - G
+    - O
   - Size: 5
     Row:
     - W
     - O
     - R
     - D
-    - J
+    - A
   SearchWords:
   - Word: CAT
   - Word: WORD
