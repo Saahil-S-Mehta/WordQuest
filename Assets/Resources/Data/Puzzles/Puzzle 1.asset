@@ -17,39 +17,39 @@ MonoBehaviour:
   Board:
   - Size: 5
     Row:
-    - C
-    - E
-    - H
-    - A
-    - W
+    - c
+    - ' '
+    - h
+    - ' '
+    - ' '
   - Size: 5
     Row:
-    - A
-    - Q
-    - C
-    - A
-    - W
+    - a
+    - ' '
+    - ' '
+    - a
+    - ' '
   - Size: 5
     Row:
-    - T
-    - S
-    - A
-    - T
-    - T
+    - t
+    - ' '
+    - ' '
+    - ' '
+    - t
   - Size: 5
     Row:
-    - V
-    - Y
-    - H
-    - B
-    - O
+    - ' '
+    - ' '
+    - ' '
+    - ' '
+    - ' '
   - Size: 5
     Row:
-    - W
-    - O
-    - R
-    - D
-    - A
+    - w
+    - o
+    - r
+    - ' '
+    - ' '
   SearchWords:
   - Word: CAT
   - Word: WORD
