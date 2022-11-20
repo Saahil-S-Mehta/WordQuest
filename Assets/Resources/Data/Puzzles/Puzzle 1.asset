@@ -17,52 +17,52 @@ MonoBehaviour:
   Board:
   - Size: 6
     Row:
-    - P
-    - F
-    - V
-    - B
-    - Z
-    - C
-  - Size: 6
-    Row:
-    - J
-    - H
-    - U
-    - H
-    - V
-    - M
-  - Size: 6
-    Row:
-    - O
-    - K
     - C
     - G
     - O
-    - B
-  - Size: 6
-    Row:
-    - Z
-    - U
-    - A
-    - E
-    - O
-    - Z
+    - L
+    - C
+    - C
   - Size: 6
     Row:
     - A
-    - S
-    - J
-    - F
-    - Q
+    - W
+    - M
     - A
-  - Size: 6
-    Row:
-    - K
     - T
-    - M
-    - Y
+    - V
+  - Size: 6
+    Row:
+    - T
     - Z
-    - G
+    - Y
+    - R
+    - L
+    - D
+  - Size: 6
+    Row:
+    - H
+    - K
+    - W
+    - O
+    - R
+    - D
+  - Size: 6
+    Row:
+    - W
+    - O
+    - H
+    - D
+    - M
+    - P
+  - Size: 6
+    Row:
+    - J
+    - O
+    - H
+    - A
+    - T
+    - F
   SearchWords:
   - Word: CAT
   - Word: WORD
@@ -70,3 +70,4 @@ MonoBehaviour:
   - Word: MAT
   - Word: WISH
   - Word: BAT
+  - Word: EAR
