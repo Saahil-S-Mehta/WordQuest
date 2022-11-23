@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -101,7 +101,9 @@ public class WordChecker : MonoBehaviour
         {
             if (_word == searchingWord.Word)
             {
+                GameEvents.CorrectWordMethod(_word, _correctSquareList);
                 _word = string.Empty;
+                _correctSquareList.Clear();
                 return;
             }
         }

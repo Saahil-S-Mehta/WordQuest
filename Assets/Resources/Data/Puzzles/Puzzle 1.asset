@@ -12,82 +12,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfce4731cf3d6404c81631edc3a0158a, type: 3}
   m_Name: Puzzle 1
   m_EditorClassIdentifier: 
-  Columns: 9
+  Columns: 6
   Rows: 6
   Board:
   - Size: 6
     Row:
-    - E
-    - L
-    - L
-    - M
-    - H
-    - D
-  - Size: 6
-    Row:
     - C
-    - S
-    - R
-    - M
-    - S
-    - P
-  - Size: 6
-    Row:
-    - J
-    - W
-    - K
-    - J
-    - R
-    - W
-  - Size: 6
-    Row:
-    - L
-    - X
-    - I
-    - D
-    - A
-    - R
-  - Size: 6
-    Row:
-    - N
-    - C
-    - V
-    - A
-    - J
-    - U
-  - Size: 6
-    Row:
-    - B
-    - P
-    - Q
-    - A
-    - H
-    - E
-  - Size: 6
-    Row:
-    - U
-    - N
-    - S
-    - H
-    - P
-    - F
-  - Size: 6
-    Row:
+    - G
     - O
-    - P
-    - T
-    - X
-    - H
-    - K
+    - L
+    - C
+    - C
   - Size: 6
     Row:
-    - E
-    - F
-    - X
     - A
-    - C
+    - W
+    - M
+    - A
+    - T
+    - V
+  - Size: 6
+    Row:
+    - T
+    - Z
+    - Y
+    - R
+    - L
     - D
+  - Size: 6
+    Row:
+    - H
+    - K
+    - W
+    - O
+    - R
+    - D
+  - Size: 6
+    Row:
+    - W
+    - O
+    - H
+    - D
+    - M
+    - P
+  - Size: 6
+    Row:
+    - J
+    - O
+    - H
+    - A
+    - T
+    - F
   SearchWords:
   - Word: CAT
   - Word: WORD
   - Word: HAT
+  - Word: MAT
+  - Word: WISH
+  - Word: BAT
+  - Word: EAR
