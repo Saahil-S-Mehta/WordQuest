@@ -50,7 +50,7 @@ public class GridSquare : MonoBehaviour
     public void OnEnableSquareSelection()
     {
         _clicked = true;
-        _selected = true;
+        _selected = false;
     }
 
     public void OnDisableSquareSelection()
