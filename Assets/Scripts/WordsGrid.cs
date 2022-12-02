@@ -57,8 +57,11 @@ public class WordsGrid : MonoBehaviour
         var midWidthPositon = (((currentGameData.selectedBoardData.Columns - 1) * squareSize.x) / 2) *0.01f;
         var midWidthHeight = (((currentGameData.selectedBoardData.Rows - 1) * squareSize.y) / 2) * 0.01f;
 
-        startPosition.x = (midWidthPositon != 0)? midWidthPositon * -1: midWidthPositon;
-        startPosition.y += midWidthHeight;
+        //startPosition.x = (midWidthPositon != 0)? midWidthPositon * -1: midWidthPositon;
+        //startPosition.y += midWidthHeight;
+
+        startPosition.x =-4;
+        startPosition.y += 6;
 
         return startPosition;
     }
