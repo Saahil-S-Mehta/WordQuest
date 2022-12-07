@@ -49,10 +49,10 @@ public class SelectPuzzleButton : MonoBehaviour
                 currentIndex = DataSaver.ReadCategoryCurrentIndexValues(gameObject.name);
                 totalBoards = data.boardData.Count;
 
-                if(levelData.data[0].categoryName== gameObject.name && currentIndex < 0)
+                if(levelData.data[0].categoryName == gameObject.name && currentIndex < 0)
                 {
                     DataSaver.SaveCategoryData(levelData.data[0].categoryName, 0);
-                    currentIndex = DataSaver.ReadCateogryCurrentIndexValues(gameObject.name);
+                    currentIndex = DataSaver.ReadCategoryCurrentIndexValues(gameObject.name);
                     totalBoards = data.boardData.Count;
                 }
             }

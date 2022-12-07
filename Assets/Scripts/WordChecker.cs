@@ -1,11 +1,12 @@
  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WordChecker : MonoBehaviour
 {
     public GameData currentGameData;
-
+    public GameLevelData gameLevelData;
     private string _word;
 
     private int _assignedPoints = 0;
@@ -23,14 +24,21 @@ public class WordChecker : MonoBehaviour
     {
         GameEvents.OnCheckSquare += SquareSelected;
         GameEvents.OnClearSelection += ClearSelection;
+        GameEvents.OnLoadNextLevel += LoadNextGameLevel;
     }
 
     private void OnDisable()
     {
         GameEvents.OnCheckSquare -= SquareSelected;
         GameEvents.OnClearSelection -= ClearSelection;
+        GameEvents.OnLoadNextLevel -= LoadNextGameLevel;
     }
     
+    private void LoadNextGameLevel()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
     void Start()
     {
         _assignedPoints = 0;
@@ -102,8 +110,10 @@ public class WordChecker : MonoBehaviour
             if (_word == searchingWord.Word)
             {
                 GameEvents.CorrectWordMethod(_word, _correctSquareList);
+                _completedWords++;
                 _word = string.Empty;
                 _correctSquareList.Clear();
+                CheckBoardCompleted();
                 return;
             }
         }
@@ -170,4 +180,61 @@ public class WordChecker : MonoBehaviour
         _word = string.Empty;
     }
 
+    private void CheckBoardCompleted()
+    {
+        bool loadNextCategory = false;
+        if (currentGameData.selectedBoardData.SearchWords.Count == _completedWords)
+        {
+            //Save current level progress
+            var categoryName = currentGameData.selectedCategoryName;
+            var currentBoardIndex = DataSaver.ReadCategoryCurrentIndexValues(categoryName);
+            var nextBoardIndex = -1;
+            var currentCategoryIndex = 0;
+            bool readNextLevelName = false;
+            for (int index = 0; index < gameLevelData.data.Count; index++)
+            {
+                if (readNextLevelName)
+                {
+                    nextBoardIndex = DataSaver.ReadCategoryCurrentIndexValues(gameLevelData.data[index].categoryName);
+                    readNextLevelName = false;
+                }
+                if (gameLevelData.data[index].categoryName == categoryName)
+                {
+                    readNextLevelName = true;
+                    currentCategoryIndex = index;
+                }
+            }
+                var currentLevelSize = gameLevelData.data[currentCategoryIndex].boardData.Count;
+                if (currentBoardIndex < currentLevelSize)
+                    currentBoardIndex += 1;
+                
+                DataSaver.SaveCategoryData(categoryName, currentBoardIndex);
+                //Unlock Next Category
+                if (currentBoardIndex >= currentLevelSize)
+                { 
+                    currentCategoryIndex++;
+                    if (currentCategoryIndex < gameLevelData.data.Count) //If this is not the last category
+                    {
+                        categoryName = gameLevelData.data[currentCategoryIndex].categoryName;
+                        currentBoardIndex = 0;
+                        loadNextCategory = true;
+                        
+                        if (nextBoardIndex <= 0)
+                        {
+                            DataSaver.SaveCategoryData(categoryName, currentBoardIndex);
+                        }
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("SelectCategory");
+                    }
+                }
+                else
+                {
+                    GameEvents.BoardCompletedMethod();
+                }
+                if (loadNextCategory)
+                    GameEvents.UnlockNextCategoryMethod();
+            }
+        }
 }
