@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfce4731cf3d6404c81631edc3a0158a, type: 3}
+  m_Name: Level 2.1 2
+  m_EditorClassIdentifier: 
+  Columns: 9
+  Rows: 6
+  Board:
+  - Size: 6
+    Row:
+    - B
+    - A
+    - L
+    - L
+    - S
+    - N
+  - Size: 6
+    Row:
+    - T
+    - B
+    - P
+    - G
+    - B
+    - V
+  - Size: 6
+    Row:
+    - P
+    - S
+    - F
+    - V
+    - A
+    - U
+  - Size: 6
+    Row:
+    - Q
+    - A
+    - D
+    - P
+    - T
+    - S
+  - Size: 6
+    Row:
+    - B
+    - Q
+    - T
+    - T
+    - O
+    - P
+  - Size: 6
+    Row:
+    - E
+    - W
+    - S
+    - Y
+    - K
+    - D
+  - Size: 6
+    Row:
+    - A
+    - W
+    - F
+    - B
+    - X
+    - O
+  - Size: 6
+    Row:
+    - R
+    - R
+    - O
+    - I
+    - C
+    - L
+  - Size: 6
+    Row:
+    - Y
+    - A
+    - O
+    - R
+    - X
+    - L
+  SearchWords:
+  - Word: BALL
+  - Word: DOLL
+  - Word: TOP
+  - Word: BEAR
+  - Word: BAT
