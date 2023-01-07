@@ -101,4 +101,15 @@ public static class GameEvents
         if (OnLoadNextLevel != null)
             OnLoadNextLevel();
     }
+
+    //*******************************************************************************
+
+    public delegate void ToggleSoundFx();
+    public static event ToggleSoundFx OnToggleSoundFx;
+
+    public static void OnToggleSoundFxMethod()
+    {
+        if (OnToggleSoundFx != null)
+            OnToggleSoundFx();
+    }
 }
